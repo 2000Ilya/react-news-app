@@ -1,0 +1,14 @@
+.news-feed {
+    height: 86vh;
+    width: 100vw;
+    position: fixed;
+    overflow: scroll;
+}
+
+.news-loader {
+    height: 86vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
