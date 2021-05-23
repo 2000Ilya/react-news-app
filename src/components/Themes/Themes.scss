@@ -1,0 +1,22 @@
+.themes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    gap: 5vh;
+}
+
+.theme-button {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    border-radius: 8px;
+    border-width: 5px;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
