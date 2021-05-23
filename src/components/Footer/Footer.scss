@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 7vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.tab-news-feed,
+.tab-themes {
+    height: 6vh;
+    width: 6vh;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
