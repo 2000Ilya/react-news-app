@@ -1,10 +1,51 @@
 .header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 7vh;
-    width: 100vw;
+    height: 50px;
+    width: calc(100vw - 100px);
     font-size: 25px;
-    position: fixed;
+    position: relative;
     top: 0;
+    padding: 0 50px;
+    justify-content: space-between;
+}
+
+.buttons-container {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-news-feed,
+.button-themes {
+    height: 40px;
+    width: 40px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.header-refresh-loader {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        justify-content: center;
+    }
+
+    .button-news-feed,
+    .button-themes,
+    .header-refresh-loader,
+    .buttons-container {
+        display: none;
+    }
+
+    .header-refresh-loader {
+        display: none;
+    }
 }
