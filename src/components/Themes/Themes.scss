@@ -8,9 +8,14 @@
 }
 
 .theme-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
     width: 200px;
-    height: 40px;
-    font-size: 18px;
+    height: 7vh;
+    font-size: 3vh;
     padding: 0;
     border-radius: 8px;
     border-width: 5px;
@@ -18,5 +23,19 @@
 
     &:focus {
         outline: none;
+    }
+}
+
+.button-loader {
+    height: 4vh;
+    width: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1025px) {
+    .themes {
+        height: calc(100vh - 50px);
     }
 }
