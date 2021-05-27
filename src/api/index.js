@@ -1,5 +1,5 @@
-export async function getNews() {
-    let newsResponse = await fetch("https://frontappapi.dock7.66bit.ru/api/news/get?page=1&count=10");
+export async function getNews(pageNumber) {
+    let newsResponse = await fetch(`https://frontappapi.dock7.66bit.ru/api/news/get?page=${pageNumber}&count=10`);
     let news = await newsResponse.json();
 
     return news;
