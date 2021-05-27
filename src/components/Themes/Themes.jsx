@@ -1,6 +1,22 @@
+import { useState } from "react";
+
+import Loader from "../Loader/Loader";
+import Header from "../../components/Header/Header";
+
 import "./Themes.scss";
 
-const Themes = ({ changeTheme, themeStyle }) => {
+const Themes = ({
+  changeTheme,
+  themeStyle,
+  isThemeLoading,
+  setThemeLoading,
+  isNewsFeedShowing,
+  setNewsFeedShowing
+}) => {
+  const [lastThemeSelected, setLastThemeSelected] = useState(themeStyle.name);
+
+  const headerTitle = isNewsFeedShowing ? "Новости" : "Темы";
+
   const themesStyle = {
     backgroundColor: themeStyle.mainColor
   };
@@ -17,20 +33,42 @@ const Themes = ({ changeTheme, themeStyle }) => {
     { text: "Синяя", themeName: "blue", id: 3 }
   ];
 
+  const loadTheme = themeName => {
+    if (themeName !== lastThemeSelected) {
+      setLastThemeSelected(themeName);
+      setThemeLoading(true);
+      changeTheme(themeName);
+    }
+  };
+
   return (
-    <div className="themes" style={themesStyle}>
-      {themeButtons.map(themeButton => {
-        return (
-          <button
-            onClick={() => changeTheme(themeButton.themeName)}
-            className="theme-button"
-            style={themeButtonStyle}
-            key={themeButton.id}
-          >
-            {themeButton.text}
-          </button>
-        );
-      })}
+    <div className="themes-container">
+      <Header
+        headerTitle={headerTitle}
+        themeStyle={themeStyle}
+        isNewsFeedShowing={isNewsFeedShowing}
+        setNewsFeedShowing={setNewsFeedShowing}
+      />
+      <div className="themes" style={themesStyle}>
+        {themeButtons.map(themeButton => {
+          return (
+            <button
+              onClick={() => loadTheme(themeButton.themeName)}
+              className="theme-button"
+              style={themeButtonStyle}
+              key={themeButton.id}
+              disabled={isThemeLoading}
+            >
+              {themeButton.text}
+              {isThemeLoading && themeButton.themeName === lastThemeSelected ? (
+                <div className="button-loader">
+                  <Loader themeStyle={themeStyle} />
+                </div>
+              ) : null}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };
