@@ -26,7 +26,6 @@ swipe-to-refresh:
 - библиотека react;
 - библиотека styled-components;
 - библиотека node-sass;
-  -a
 - таблицы стилей SCSS;
 
 # Сборка проекта
