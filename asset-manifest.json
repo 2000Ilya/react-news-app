@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-news-app/static/css/main.24107174.css",
+    "main.js": "/react-news-app/static/js/main.e057b562.js",
+    "static/media/SegoeUI.ttf": "/react-news-app/static/media/SegoeUI.1c5a6bfd4ec7a1bbe4ac.ttf",
+    "static/media/loading-arrow.svg": "/react-news-app/static/media/loading-arrow.c3e173ab5a9031a76ed29b4f926a685d.svg",
+    "static/media/palette.svg": "/react-news-app/static/media/palette.46f8b8f7c4c2684a569722a704010df0.svg",
+    "static/media/list.svg": "/react-news-app/static/media/list.92256f00adc8cd8757a364045870db13.svg",
+    "index.html": "/react-news-app/index.html",
+    "main.24107174.css.map": "/react-news-app/static/css/main.24107174.css.map",
+    "main.e057b562.js.map": "/react-news-app/static/js/main.e057b562.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24107174.css",
+    "static/js/main.e057b562.js"
+  ]
+}
